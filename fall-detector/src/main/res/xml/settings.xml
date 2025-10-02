@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Emergency Contact"
+        app:iconSpaceReserved="false">
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="contact"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="Phone number to call when a fall is detected"
+            android:title="Emergency Number"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            android:key="browse"
+            android:summary="Get a number from your contacts"
+            android:title="Contact Book"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Voice Assistant Settings"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:defaultValue="english"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:key="voice_language"
+            android:summary="Select the language for voice interactions"
+            android:title="Language"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="use_tts"
+            android:summary="Use text-to-speech instead of pre-recorded audio"
+            android:title="Use Text-to-Speech"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="Advanced Settings"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="use_gemini_api"
+            android:summary="Use Gemini AI to better understand voice responses"
+            android:title="Use Gemini AI"
+            app:iconSpaceReserved="false" />
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="gemini_api_key"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="API key for Gemini integration"
+            android:title="Gemini API Key"
+            app:iconSpaceReserved="false"
+            app:isPreferenceVisible="false" />
+
+        <Preference
+            android:key="test_voice_assistant"
+            android:summary="Test how the voice assistant sounds"
+            android:title="Test Voice Assistant"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen> 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Voice Assistant Settings">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="enable_voice_confirmation"
+            android:summary="Enable voice-based fall confirmation"
+            android:title="Voice Confirmation" />
+
+        <ListPreference
+            android:defaultValue="english"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:key="voice_language"
+            android:summary="Select language for voice interactions"
+            android:title="@string/voice_language" />
+            
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="use_tts"
+            android:summary="Use text-to-speech instead of pre-recorded audio"
+            android:title="Use Text-to-Speech" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Alert Settings">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="enable_sound_alert"
+            android:summary="Play sound during emergency alerts"
+            android:title="Sound Alert" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="enable_sms_alert"
+            android:summary="Send SMS during emergency"
+            android:title="SMS Alert" />
+            
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="emergency_contacts"
+            android:summary="Enter comma-separated emergency contact numbers"
+            android:title="Emergency Contacts" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
